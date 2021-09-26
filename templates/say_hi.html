@@ -1,0 +1,9 @@
+<!doctype html>
+<title>Hola | Bonjour | こんにちは</title>
+{% if language == "jp" %}
+<h1>こんにちはあ {{ name }}! </h1>
+{% elif language == "fr" %}
+<h1>Bonjour {{ name }}! </h1>
+{% else %}
+<h1>Hola {{ name }}!</h1>
+{% endif %}
