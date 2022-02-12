@@ -10,11 +10,7 @@ import io
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return render_template("index.html")
-
-@app.route("/sayHi/<name>")
+@app.route("/<name>")
 def sayHi(name):
     language = request.args.get('lang','')
     return render_template('say_hi.html', name=name, language=language)
